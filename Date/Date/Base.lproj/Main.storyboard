@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wVA-cI-GWb">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Date-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Date" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="當前時間：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQb-vL-SlG">
+                                <rect key="frame" x="0.0" y="84" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Iwh-YC-CpU">
+                                <rect key="frame" x="47" y="224" width="320" height="288"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="距離" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kku-Je-pKX">
+                                        <rect key="frame" x="129.66666666666666" y="0.0" width="60.666666666666657" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="EqC-mo-riQ">
+                                        <rect key="frame" x="0.0" y="36" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="553431510.18722296">
+                                            <!--2018-07-16 10:58:30 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="pickChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ILd-iN-2Gn"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="還有幾天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7Q-Sd-iOa">
+                                        <rect key="frame" x="0.0" y="252" width="320" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="d7Q-Sd-iOa" secondAttribute="bottom" id="8oH-yk-T0k"/>
+                                    <constraint firstAttribute="trailing" secondItem="d7Q-Sd-iOa" secondAttribute="trailing" id="NtS-It-US7"/>
+                                    <constraint firstItem="d7Q-Sd-iOa" firstAttribute="top" secondItem="EqC-mo-riQ" secondAttribute="bottom" id="tf2-ss-zTg"/>
+                                    <constraint firstItem="d7Q-Sd-iOa" firstAttribute="leading" secondItem="Iwh-YC-CpU" secondAttribute="leading" id="wwf-qs-rEm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iwh-YC-CpU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0sz-uh-8sx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bQb-vL-SlG" secondAttribute="trailing" id="6Iw-gI-SoU"/>
+                            <constraint firstItem="bQb-vL-SlG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8Ik-TH-mQk"/>
+                            <constraint firstItem="Iwh-YC-CpU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9pQ-0E-Cht"/>
+                            <constraint firstItem="bQb-vL-SlG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gU7-TU-0QN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Date" id="K3V-qw-gnG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="PJ8-8f-5ne">
+                            <connections>
+                                <action selector="refreshCurrentTime:" destination="BYZ-38-t0r" id="5Nl-rB-e6h"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="bQb-vL-SlG" id="LKh-HH-WSQ"/>
+                        <outlet property="datePicker" destination="EqC-mo-riQ" id="l4t-fq-OLp"/>
+                        <outlet property="daysLeftLabel" destination="d7Q-Sd-iOa" id="XCE-IJ-Zr0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075.3623188405797" y="132.88043478260872"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nkc-Zg-w9W">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wVA-cI-GWb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="deI-1N-mKx">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="o1L-Es-l1i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53K-aV-uf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.80000000000001" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+</document>
