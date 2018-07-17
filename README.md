@@ -10,6 +10,12 @@
 
 
 
+本次實作教學文章：
+
+[Swift — 給個時間吧（ Date & DatePicker）](https://medium.com/@JJeremy.XUE/swift-%E7%B5%A6%E5%80%8B%E6%99%82%E9%96%93%E5%90%A7-date-datepicker-424dba13392c)
+
+
+
 ### 功能
 
 * 得出當前時間
